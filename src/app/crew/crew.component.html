@@ -5,7 +5,7 @@
       <span *ngIf="memberBeingEdited !== member; else elseBlock">
             <span (click)="edit(member)" class="editable-text">{{member.name}}</span>
             <span style="color:goldenrod" *ngIf="member.firstMission === true"> - 1st </span>
-            <button style="background-color: red; color: white"(click)="remove(member)">Remove</button>
+            <button style="background-color: red; color: white"(click)="remove(member)">X</button>
       </span>
 
     <ng-template #elseBlock>
@@ -17,5 +17,5 @@
 </ul>
 
 <input #name type="text">
-<label>First Mission <input #firstMission type="checkbox"></label>
+<label>First Mission <input #firstMission type="checkbox" ></label>
 <p></p><button (click)="add(name.value, firstMission.checked)">Add member</button>
